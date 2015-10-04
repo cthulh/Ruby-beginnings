@@ -1,4 +1,5 @@
 def sort_it(list_, n)
+
     clone_list = list_.tr(" ","").split(",").dup
     org_list = list_.split(", ").dup
     letters = clone_list.map {|word| word[n-1,1]}
