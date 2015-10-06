@@ -1,8 +1,21 @@
 require 'date'
 def read_hash(file)
     #this was googled I admit, a one-liner!!!
-    file_hash = Hash[File.read(file).split("\n").map{|i|i.split(",\t")}]
-    puts file_hash
+    return file_hash = Hash[File.read(file).split("\n").map{|i|i.split(",\t")}]
+end
+
+def ask_for_bday(fname,lname)
+    datafile = read_hash('names.txt')
+    return datafile["#{fname} #{lname}"]
+end
+
+def ask_for_next_bday
+    #calculate how many days to next birth day
+
+end
+
+def ask
+    #wrap both ask functions
 end
 
 def write_file
@@ -31,8 +44,19 @@ end
 
 Dir.chdir 'C:/Dev/Testing'
 
-write_file
-read_hash('names.txt')
+puts
+while true
+    puts 'Press E to enter data or A to access data from file:'
+    choice = gets.chomp.capitalize[0,1]
+    if choice == 'E'
+        write_file
+        break
+    elsif choice == 'A'
+        ask
+        break
+    end
+end
+end
 
 
 
