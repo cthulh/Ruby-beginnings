@@ -96,13 +96,31 @@ class Dragon
     end
 end
 
-pet = Dragon.new 'Norbert'
-pet.feed
-pet.toss
-pet.walk
-pet.put_to_bed
-pet.rock
-pet.put_to_bed
-pet.put_to_bed
-pet.put_to_bed
-pet.put_to_bed
+puts 'Welcome to a baby dragon simulator.'.center(50)
+puts 'Enter a name for your newborn baby dragon:'
+dname = gets.chomp.capitalize
+pet = Dragon.new dname
+puts
+puts 'There are a few actions you can perform with your baby dragon:'
+while true
+    puts
+    puts '[F]feed, [T]toss it in the air, [W]walk it, [R]rock it, [P]put to bed, [E]exit'
+    print 'Press a key to choose your action: '
+    choice = gets.chomp.capitalize[0,1]
+    next if !["F","T","W","R","P","E"].include? choice
+    case choice
+        when "F"
+        pet.feed
+        when "T"
+        pet.toss
+        when "W"
+        pet.walk
+        when "R"
+        pet.rock
+        when "P"
+        pet.put_to_bed
+    else
+        break
+    end
+    
+end
