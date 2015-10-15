@@ -15,6 +15,7 @@ while i!=0
         puts last_verse
         break
     end
+    #test
     
 i-=1
 end
