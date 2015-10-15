@@ -15,6 +15,7 @@ while i!=0
         puts last_verse
         break
     end
+    #just a comment = test of new git connection
     
 i-=1
 end
