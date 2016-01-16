@@ -1,0 +1,2 @@
+puts('I\'m ' + (Time.new-Time.gm(1985,5,27,12,15)).to_i.to_s + ' seconds old.')
+puts('On this day I will be 1 billion seconds old at that particular time: '+ (Time.gm(1985,5,27,12,15)+1000000000).to_s)
